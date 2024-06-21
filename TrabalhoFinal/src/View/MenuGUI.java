@@ -45,7 +45,7 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("SEJA BEM VINDO!");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\2.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Documents\\FACULDADE URI\\TERCEITO_ SEMESTRE\\POO\\2.png")); // NOI18N
 
         panel1.setBackground(new java.awt.Color(0, 102, 0));
 
