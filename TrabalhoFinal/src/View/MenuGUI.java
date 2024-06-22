@@ -17,6 +17,7 @@ public class MenuGUI extends javax.swing.JFrame {
      */
     public MenuGUI() {
         initComponents();
+        setSize(800,700);
         this.setLocationRelativeTo(null);       
         this.setResizable(false); 
     }
@@ -37,7 +38,8 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnUsuario = new java.awt.Button();
         btnFazenda = new java.awt.Button();
-        btnMedicamentos = new java.awt.Button();
+        btnSair = new java.awt.Button();
+        btnMedicamentos1 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -71,10 +73,17 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        btnMedicamentos.setLabel("Medicamentos");
-        btnMedicamentos.addActionListener(new java.awt.event.ActionListener() {
+        btnSair.setLabel("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMedicamentosActionPerformed(evt);
+                btnSairActionPerformed(evt);
+            }
+        });
+
+        btnMedicamentos1.setLabel("Medicamentos");
+        btnMedicamentos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMedicamentos1ActionPerformed(evt);
             }
         });
 
@@ -96,7 +105,10 @@ public class MenuGUI extends javax.swing.JFrame {
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnFazenda, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnMedicamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnMedicamentos1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)))))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
@@ -110,9 +122,11 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnFazenda, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(btnMedicamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(btnMedicamentos1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -158,10 +172,14 @@ public class MenuGUI extends javax.swing.JFrame {
       usuario.setVisible(true);
     }//GEN-LAST:event_btnUsuarioActionPerformed
 
-    private void btnMedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicamentosActionPerformed
-      MedicamentoGUI medicamento = new MedicamentoGUI();
-      medicamento.setVisible(true);
-    }//GEN-LAST:event_btnMedicamentosActionPerformed
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnMedicamentos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicamentos1ActionPerformed
+       MedicamentoGUI medicamentos = new MedicamentoGUI();
+       medicamentos.setVisible(true);
+    }//GEN-LAST:event_btnMedicamentos1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,7 +218,8 @@ public class MenuGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnFazenda;
-    private java.awt.Button btnMedicamentos;
+    private java.awt.Button btnMedicamentos1;
+    private java.awt.Button btnSair;
     private java.awt.Button btnUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

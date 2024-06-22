@@ -456,8 +456,9 @@ public class MedicamentoGUI extends javax.swing.JFrame {
         objMedicamento = new Medicamento();
         objMedicamento.setNomeMed(txtNomeMed.getText());
         objMedicamento.setTipo(txtTipoMed.getText());
+        objMedicamento.setIDFazenda(txtIDFazenda.getText());
 
-        if ((!txtNomeMed.getText().isEmpty()) || (!txtTipoMed.getText().isEmpty())) {
+        if ((!txtNomeMed.getText().isEmpty()) || (!txtTipoMed.getText().isEmpty())|| (!txtIDFazenda.getText().isEmpty())) {
             // instanciando a classe UsuarioDAO do pacote dao e criando seu objeto dao
             objDAO = new MedicamentoDAO();
             buscar = true;

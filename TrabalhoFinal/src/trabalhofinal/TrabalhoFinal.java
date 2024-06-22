@@ -1,6 +1,7 @@
 package trabalhofinal;
 
 import View.MenuGUI;
+import View.TelaPartesGUI;
 
 /**
  *
@@ -12,8 +13,8 @@ public class TrabalhoFinal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MenuGUI menu = new MenuGUI();
-        menu.setVisible(true);
+        TelaPartesGUI telainicial = new TelaPartesGUI();
+        telainicial.setVisible(true);
         
         
     }

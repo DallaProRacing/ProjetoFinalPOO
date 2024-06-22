@@ -69,6 +69,9 @@ public class MedicamentoDAO {
             } else if (!objMedicamento.getTipo().isEmpty()) {
                 sql = "SELECT * FROM Medicamento WHERE Tipo LIKE '%" + objMedicamento.getTipo()+ "%' ";
             }
+            else if (!objMedicamento.getIDFazenda().isEmpty()) {
+                sql = "SELECT * FROM Medicamento WHERE IDFazenda LIKE '%" + objMedicamento.getIDFazenda()+ "%' ";
+            }
             ArrayList dado = new ArrayList();
 
             PreparedStatement ps = connection.prepareStatement(sql);
